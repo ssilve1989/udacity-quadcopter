@@ -12942,6 +12942,9 @@ The task is to fly up from one position on the z-axis to the next. Since the tas
 </ul>
 <p><strong>Answer</strong>:
 I used the DDPG algorithm as suggested by the course, and Ornstein-Uhlenbeck Noise code. The hyperparameters are unchanged. For Actor and Critic, I used a ReLU model.</p>
+<p>The Actor uses a network of Dense(32) -&gt; Dense(64) -&gt; Dense(32) with a relu activation function.
+The Critic uses a network of Dense(32) -&gt; Dense(64) with a relu activation function.</p>
+<p>It uses an adam optimzer with MSE loss function.</p>
 
 </div>
 </div>
