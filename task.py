@@ -14,7 +14,6 @@ class Task():
             runtime: time limit for each episode
             target_pos: target/goal (x,y,z) position for the agent
         """
-        # Simulation
         self.sim = PhysicsSim(init_pose, init_velocities, init_angle_velocities, runtime)
         self.init_pose = np.array([0.0, 0.0, 1.0, 0.0, 0.0, 0.0]) if init_pose is None else init_pose
         self.action_repeat = 3
@@ -29,7 +28,6 @@ class Task():
 
     def get_reward(self):
         """Uses current pose of sim to return reward."""
-#         reward = 1.-.3*(abs(self.sim.pose[:3] - self.target_pos)).sum()
         reward = 1. -.3*abs(self.sim.pose[2] - self.target_pos[2])
         if self.sim.pose[2] > self.init_pose[2]:
             # give extra reward when moving upward

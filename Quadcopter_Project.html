@@ -12924,7 +12924,7 @@ Episode =  500, current reward =  16.647, sim pos = [-0.00367419 -3.09740912  7.
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Reflections">Reflections<a class="anchor-link" href="#Reflections">&#182;</a></h2><p><strong>Question 1</strong>: Describe the task that you specified in <code>task.py</code>.  How did you design the reward function?</p>
 <p><strong>Answer</strong>:
-The task is to fly up from one position on the z-axis to the next. Since the task is to only ascend on the z-axis, the reward only considers that.</p>
+The task is to fly up from one position on the z-axis to the next. Since the task is to only ascend on the z-axis, the reward only considers that. There is an extra reward when moving upwards.</p>
 <p>Since we want the quadcopter to ascend, there is a penalty for descending after ascending.</p>
 
 </div>
@@ -12941,7 +12941,7 @@ The task is to fly up from one position on the z-axis to the next. Since the tas
 <li>What neural network architecture did you use (if any)? Specify layers, sizes, activation functions, etc.</li>
 </ul>
 <p><strong>Answer</strong>:
-I used the DDPG algorithm and Ornstein-Uhlenbeck Noise coide. The hyperparameters are unchanged.</p>
+I used the DDPG algorithm as suggested by the course, and Ornstein-Uhlenbeck Noise code. The hyperparameters are unchanged. For Actor and Critic, I used a ReLU model.</p>
 
 </div>
 </div>
